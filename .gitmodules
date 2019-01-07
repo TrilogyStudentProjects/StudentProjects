@@ -13,3 +13,6 @@
 [submodule "cats-and-dogs"]
 	path = cats-and-dogs
 	url = https://github.com/TrilogyStudentProjects/cats-and-dogs
+[submodule "cloudy-with-a-chance-of-pho"]
+	path = cloudy-with-a-chance-of-pho
+	url = https://github.com/TrilogyStudentProjects/Cloudy-with-a-chance-of-Pho

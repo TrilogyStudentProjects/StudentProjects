@@ -1,0 +1,15 @@
+[submodule "cryptomonstar"]
+	path = cryptomonstar
+	url = https://github.com/TrilogyStudentProjects/cryptomonstar
+[submodule "trivia-game"]
+	path = trivia-game
+	url = https://github.com/TrilogyStudentProjects/TriviaGame
+[submodule "mytrailfinder"]
+	path = mytrailfinder
+	url = https://github.com/TrilogyStudentProjects/MyTrailFinder
+[submodule "whats-for-dinner"]
+	path = whats-for-dinner
+	url = https://github.com/TrilogyStudentProjects/Recipes-Project
+[submodule "cats-and-dogs"]
+	path = cats-and-dogs
+	url = https://github.com/TrilogyStudentProjects/cats-and-dogs

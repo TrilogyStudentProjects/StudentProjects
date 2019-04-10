@@ -59,24 +59,33 @@ body{
 .bg-white{background-color:#fff;}
 .bg-grey{background:#EDEEEE;}
 
+.hero-mobile-image{
+	background-image:url('images/hero_shreddit.jpg');
+	background-position: bottom center;
+	background-size:cover;
+	display:block;
+	width:100%;
+	height:250px;
+}
+.hero-mobile{overflow:hidden;}
+
 .bgimage{
 	color:white;
 	width:100%;
-	height:650px;
-	background: url('images/hero.jpg');
-    
+	height:400px;
+	background: url('images/hero_shreddit.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size:cover;
-	/*
-	
-	background-size:100% 130%;
-	background-attachment: fixed;
-	*/
-	
 	position:relative;
 }
-/*
+.hero-inner{
+	display:flex;
+	flex-direction:column;
+  	align-items: center;
+  	justify-content: center;
+	height:400px;
+}
 .bgimage .overlay{
 	width:100%;
 	height:100%;
@@ -84,7 +93,7 @@ body{
 	z-index:1;
 	background-color:rgba(0,0,0,0.5);
 }
-*/
+
 .bgimage .container{
 	position:relative;
 	z-index:10;
@@ -93,13 +102,7 @@ body{
   color:white;
   text-shadow:2px 2px #333;
 }
-.hero-inner{
-	display:flex;
-	flex-direction:column;
-  	align-items: center;
-  	justify-content: center;
-	height:650px;
-}
+
 .hero-inner h2{font-size:40px;}
 
 .card{
@@ -108,7 +111,7 @@ body{
 	box-shadow: 0 0 20px 7px rgba(0,0,0,0.075);
 }
 .card .inner{padding:15px;}
-.card .inner .content{min-height:6em;}
+.card .inner .content{min-height:8em;}
 .card .inner .byline{min-height:3em;}
 .card .btn{display:inline-block;}
 .card{
@@ -214,14 +217,7 @@ footer .ta-container{
     }
 	footer .ta-container .links a:last-child{border-right:none;}
 }
-.hero-mobile-image{
-	background-image:url('images/hero_mobile.jpg');
-	background-size:cover;
-	display:block;
-	width:100%;
-	height:250px;
-}
-.hero-mobile{overflow:hidden;}
+
 </style>
 </head>
 <body>
@@ -248,18 +244,18 @@ footer .ta-container{
 	<div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-		<h2 style="font-weight:bold;">King of the Court</h2>
+		<h2 style="font-weight:bold;">Shreddit</h2>
 			<h3 class="text-left byline">
-				BY: <span class="text-blue">Alexander B.</span><br/>
+				BY: <span class="text-blue">Melissa N.</span><br/>
 			</h3>
-			<p style="margin-top:15px;margin-bottom:25px;">You can create, Schedule and Find Basket Ball Games that already exist.</p>
+			<p style="margin-top:15px;margin-bottom:25px;">A full-stack React app allowing users to upload short melodies in a grid-based player.</p>
         	<p>
-        	    <a target="_blank" rel="noopener" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary btn-large">
+        	    <a target="_blank" rel="noopener" href="https://shredditmern.herokuapp.com/" class="btn btn-primary btn-large">
 					<i class="fas fa-globe-americas"></i>
 					Visit Site
 				</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a target="_blank" rel="noopener" href="https://github.com/alexanderjbeal/project-2" class="btn btn-primary btn-large">
+				<a target="_blank" rel="noopener" href="https://github.com/TrilogyStudentProjects/Shreddit" class="btn btn-primary btn-large">
 					<i class="fab fa-github"></i>
 					Github
 				</a>
@@ -274,19 +270,19 @@ footer .ta-container{
   <div class="container">
     <div class="row">
       <div class="col-md-12 hero-inner">
-   	 	<h2 style="font-weight:bold;">King of the Court</h2>
+   	 	<h2 style="font-weight:bold;">Shreddit</h2>
 		<h3 class="text-center">
-			BY: <span class="text-blue">Alexander B.</span><br/>
+			BY: <span class="text-blue">Melissa N.</span><br/>
 			PROGRAM: <span class="text-blue">Coding</span>
 		</h3>
-		<p style="margin-top:15px;margin-bottom:25px;text-align:center;">You can create, Schedule and Find Basketball Games that already exist.</p>
+		<p style="margin-top:15px;margin-bottom:25px;text-align:center;">A full-stack React app allowing users to upload short melodies in a grid-based player.</p>
         <p>
-            <a target="_blank" rel="noopener" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary btn-large">
+            <a target="_blank" rel="noopener" href="https://shredditmern.herokuapp.com/" class="btn btn-primary btn-large">
 				<i class="fas fa-globe-americas"></i>
 				Visit Site
 			</a>
 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<a target="_blank" rel="noopener" href="https://github.com/TrilogyStudentProjects/king-of-the-court" class="btn btn-primary btn-large">
+			<a target="_blank" rel="noopener" href="https://github.com/TrilogyStudentProjects/Shreddit" class="btn btn-primary btn-large">
 				<i class="fab fa-github"></i>
 				Github
 			</a>
@@ -298,6 +294,85 @@ footer .ta-container{
 <div class="container-fluid bg-grey">
 <div class="container" style="margin-top:25px;">
 	<h1 style="margin:10px 0;font-weight:600;">Featured Projects</h1>
+
+
+	<div class="row">
+			<div class="col-md-4 col-xs-12">
+					<div class="card">
+						<img src="images/project_unity.jpg">
+						<div class="inner">
+							<h2>Unity</h2>
+							<h4 class="byline">
+								BY: <span class="text-blue">Chandana K.</span><br/>
+								PROGRAM: <span class="text-blue">Coding</span>
+							</h4>
+							<div class="content">
+								<p>Unity is a Fintech Full stack application, that enables its customers as clients and advisors, working with real time stock market related information, serving their financial and investment needs.</p>
+							</div>
+							<a target="_blank" href="https://mighty-escarpment-81668.herokuapp.com/" class="btn btn-primary">
+								<i class="fas fa-globe-americas"></i>
+								Visit Site
+							</a>
+							
+							<a target="_blank" href="https://github.com/TrilogyStudentProjects/unity" class="btn btn-primary pull-right">
+								<i class="fab fa-github"></i>
+								GitHub
+							</a>
+							
+						</div>
+					</div>
+			</div>
+			<div class="col-md-4 col-xs-12">
+					<div class="card">
+						<img src="images/project_swiftbrew.jpg">
+						<div class="inner">
+							<h2>Swiftbrew</h2>
+							<h4 class="byline">
+								BY: <span class="text-blue">Richard S.</span><br/>
+								PROGRAM: <span class="text-blue">Coding</span>
+							</h4>
+							<div class="content">
+								<p>Create and save order templates with ease for future use!</p>
+							</div>
+							<a target="_blank" href="https://swiftbrew.herokuapp.com/home" class="btn btn-primary">
+								<i class="fas fa-globe-americas"></i>
+								Visit Site
+							</a>
+							
+							<a target="_blank" href="https://github.com/TrilogyStudentProjects/swiftbrew" class="btn btn-primary pull-right">
+								<i class="fab fa-github"></i>
+								GitHub
+							</a>
+							
+						</div>
+					</div>
+			</div>
+		<div class="col-md-4 col-xs-12">
+				<div class="card">
+					<img src="images/project_king_of_court.jpg">
+					<div class="inner">
+						<h2>King of the Court</h2>
+						<h4 class="byline">
+							BY: <span class="text-blue">Alexander B.</span><br/>
+							PROGRAM: <span class="text-blue">Coding</span>
+						</h4>
+						<div class="content">
+							<p>You can create, Schedule and Find Basketball Games that already exist.</p>
+						</div>
+						<a target="_blank" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary">
+							<i class="fas fa-globe-americas"></i>
+							Visit Site
+						</a>
+						
+						<a target="_blank" href="https://github.com/TrilogyStudentProjects/king-of-the-court" class="btn btn-primary pull-right">
+							<i class="fab fa-github"></i>
+							GitHub
+						</a>
+						
+					</div>
+				</div>
+		</div>
+	</div>
 
 	<div class="row">
 			<div class="col-md-4 col-xs-12">

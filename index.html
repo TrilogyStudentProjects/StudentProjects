@@ -10,7 +10,43 @@
 <script>(function(d) {
     var config = {kitId: 'fxt3tcu',scriptTimeout: 3000,async: true},
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);</script>
+  })(document);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKZRF96');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- End Google Tag Manager -->
+<script>
+jQuery(function($){
+	$('.btn').click(function(){
+		var $t = $(this);
+		var type = $t.find('.fa-github').length ? 'Github':'Project Site';
+		var href = $t.attr('href');
+		var name = $t.closest('div').find('h2').text();
+		trilogyTrackingEvent(type, 'click', name);
+		return true;
+	});
+});
+function trilogyTrackingEvent(category, action, label){
+	try{
+		if(typeof ga == 'function' && typeof ga.getAll == 'function'){
+			ga.getAll().forEach(function(t){
+				t.send('event', category, action, label);
+			});
+		}
+		else{
+			console.log('Tracking Event: C:'+category+' A:'+action+' L:'+label);
+		}
+	}catch(e){
+		console.log('trilogyTrackingEvent Error');
+	}
+}
+</script>
 <style>
 
 body{
@@ -218,12 +254,12 @@ footer .ta-container{
 			</h3>
 			<p style="margin-top:15px;margin-bottom:25px;">You can create, Schedule and Find Basket Ball Games that already exist.</p>
         	<p>
-        	    <a rel="noopener" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary btn-large">
+        	    <a target="_blank" rel="noopener" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary btn-large">
 					<i class="fas fa-globe-americas"></i>
 					Visit Site
 				</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a rel="noopener" href="https://github.com/alexanderjbeal/project-2" class="btn btn-primary btn-large">
+				<a target="_blank" rel="noopener" href="https://github.com/alexanderjbeal/project-2" class="btn btn-primary btn-large">
 					<i class="fab fa-github"></i>
 					Github
 				</a>
@@ -245,12 +281,12 @@ footer .ta-container{
 		</h3>
 		<p style="margin-top:15px;margin-bottom:25px;text-align:center;">You can create, Schedule and Find Basketball Games that already exist.</p>
         <p>
-            <a rel="noopener" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary btn-large">
+            <a target="_blank" rel="noopener" href="https://floating-headland-56018.herokuapp.com/" class="btn btn-primary btn-large">
 				<i class="fas fa-globe-americas"></i>
 				Visit Site
 			</a>
 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<a rel="noopener" href="https://github.com/TrilogyStudentProjects/king-of-the-court" class="btn btn-primary btn-large">
+			<a target="_blank" rel="noopener" href="https://github.com/TrilogyStudentProjects/king-of-the-court" class="btn btn-primary btn-large">
 				<i class="fab fa-github"></i>
 				Github
 			</a>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Featured Student Projects - Trilogy Education Services</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../images/favicon.png" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<script>(function(d) {
+    var config = {kitId: 'fxt3tcu',scriptTimeout: 3000,async: true},
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKZRF96');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- End Google Tag Manager -->
+<script>
+jQuery(function($){
+	$('.btn').click(function(){
+		var $t = $(this);
+		var type = $t.find('.fa-github').length ? 'Github':'Project Site';
+		var href = $t.attr('href');
+		var name = $t.closest('div').find('h2').text();
+		trilogyTrackingEvent(type, 'click', name);
+		return true;
+	});
+});
+function trilogyTrackingEvent(category, action, label){
+	try{
+		if(typeof ga == 'function' && typeof ga.getAll == 'function'){
+			ga.getAll().forEach(function(t){
+				t.send('event', category, action, label);
+			});
+		}
+		else{
+			console.log('Tracking Event: C:'+category+' A:'+action+' L:'+label);
+		}
+	}catch(e){
+		console.log('trilogyTrackingEvent Error');
+	}
+}
+</script>
+<style>
+html,body{width:100%;}
+body{
+	background:#fff;
+	font-size: 16px;
+	font-family: museo-sans;
+    font-weight: 400;
+}
+h1{color:#28C8E5;font-size:36px;margin-bottom:1em;}
+.bg-white{background-color:#fff;}
+.bg-grey{background:#EDEEEE;}
+
+.card{
+	height:100%;
+	background-color:white;
+	margin:15px auto;
+	box-shadow: 0 0 20px 7px rgba(0,0,0,0.075);
+}
+.card .inner{padding:15px;}
+.card .inner .content{min-height:8em;}
+.card .inner .byline{min-height:3em;line-height:1.5em;font-size:16px;}
+.card .btn{display:inline-block;}
+.card{
+	position:relative;
+	padding-top:200px;
+}
+.card a{line-height:2em;}
+.card h2{font-size:16px;font-weight:bold;}
+.card .inner{padding-top:0;}
+.card img{
+	object-fit:cover;
+	object-position: top;
+	top:0;
+	left:0;
+	right:0;
+	position:absolute;
+	width:100%;
+	height:200px;
+}
+
+.card h3{
+	font-weight: normal;
+    font-size: 16px;
+    border-bottom: 1px solid #dedede;
+    padding: 0 0 8px 0;
+    margin-top: 10px;
+}
+}
+
+.text-blue{color:#28c8e5;}
+
+#header .logo{
+	margin:15px auto;
+}
+
+.container-fluid .container{padding-left:0;padding-right:0;}
+
+#header .text{
+	font-size:24px;
+	line-height:1.4em;
+}
+footer {
+    margin: 20px 0 0 0;
+    color: #fff;
+    padding: 45px 15px;
+    background-color: #333;
+    font-family: museo-sans,sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+footer .logo {
+    max-width: 80px;
+}
+footer .copyright, footer .links {
+    font-size: 13px;
+    font-family: freight-micro-pro;
+}
+footer .social a i {
+    font-size: 32px;
+    color:white;
+}
+footer a,footer a:hover{
+    color: #28c8e5;
+}
+footer .ta-container{
+	margin-top:15px;
+}
+
+@media(max-width:768px){
+    .social{
+        margin: 15px auto;
+    }
+    footer .social a{padding:0 15px;}
+}
+
+@media(max-width:992px){
+	.hero .image{text-align:center;}
+	#header .logo{
+			display:block;
+			margin:15px auto;
+	}
+	#header h2{
+		text-align:center;
+		border-top: 1px solid #EBEBE8;
+		margin-top:15px;
+		margin-bottom:15px;
+		padding-top:15px;
+	}
+    #header .right{
+        float:none !important;
+        display:block;
+    }
+    .text-center-mobile{text-align:center !important;}
+}
+
+@media (min-width: 992px){
+	.hero{padding-bottom:50px;}
+	#header h2.text{
+		font-size:16px;
+		margin-top:50px;
+		text-align:right;
+	}
+	#header .logo{
+		margin:25px 0;
+	}
+    .footer-logo{text-align:left;}
+    footer .copyright, footer .links {
+    	text-align: right;
+    }
+    footer .social a {
+       padding-left: 30px;
+    }
+	
+    footer .ta-container .links a{
+		text-decoration: none;
+        border-right: 2px solid #fff;
+        padding: 0 10px;
+    }
+}
+
+@media(min-width:768px) and (max-width:992px){
+	.card{padding-top:130px;font-size:14px;}
+	.card h2{font-size:14px;}
+	.card h3{font-size:14px;}
+	.card img{
+		height:130px;
+	}
+	.card .inner {
+    	padding: 10px;
+	}
+}
+section{padding:30px 0;}
+.portfolio-heading h3{
+	display:inline-block;
+	font-size:22px;
+}
+.portfolio-heading span{}
+h3{font-size:20px;line-height:24px;font-weight:700;}
+
+
+.hero img{max-width:534px;}
+@media(min-width:768px){
+	.projects{display:flex;}
+}
+@media(min-width:992px){
+	.project-types .col-md-4{padding:0 40px;}
+	.vert-center-md{
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+	.flex-md{display:flex;}
+	.hero .vert-center-md > div{padding-right:45px;}
+	.portfolio-heading h3{font-size:30px;margin-right:10px;}
+	.portfolio-heading span{font-size:20px;}
+}
+
+
+
+/*----------------Footer---------------------*/
+footer ul {
+    padding-left: 0;
+    list-style: none;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: museo-sans, sans-serif;
+    line-height: 1.8em;
+}
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+footer ul a {
+	text-decoration: none;
+    color: white;
+}
+footer ul:before {
+    display: block;
+    content: '';
+    width: 22px;
+    height: 1px;
+    background-color: #28c8e5;
+    margin: 27px auto;
+}
+footer .social:before {
+    display: block;
+    content: '';
+    width: 22px;
+    height: 1px;
+    background-color: #28c8e5;
+    margin: 27px auto;
+}
+footer .logo {
+    max-width: 150px;
+}
+footer .address {
+    font-weight: bold;
+}
+footer .ta-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer .ta-container .links a {
+    padding: 10px 0px;
+    border: none;
+}
+@media(min-width:768px){
+	footer .ta-container .links a:last-child{border-right:none;}
+	footer {
+    	padding: 85px 15px;
+    	text-align: left;
+	}
+	footer .footer-menu {column-gap: 0;}
+	footer .container>.row>div {
+    	padding: 0 15px;			/* was 0 30px*/
+	}
+	footer .container>.row>div:not(:first-child) {
+    	border-left: 2px solid #3393a3;
+	}
+	footer ul {
+	    column-count: 2;
+	    column-gap: 20%;
+	    margin-top: -10px;
+	    margin-bottom: -10px;
+	}
+	footer ul:before{content:none;}
+	footer .social:before{content:none;}
+	footer .social a {
+	    padding-left: 0;
+	    padding-right: 20px;
+	}
+	footer .container>.row .social {
+    	text-align: right;
+    	padding: 0;
+	}
+	footer .ta-container {
+    	display: block;
+	}
+	footer .copyright, footer .links {
+	    float: right;
+	    position: relative;
+	    top: -15px;
+	}
+	footer .ta-container .links a {
+	    text-decoration: none;
+	    border-right: 2px solid #ffffff;
+	    padding: 0 10px;
+	}
+}
+@media(min-width:768px) and (max-width:992px){
+	footer .ta-container{margin-top:50px;}
+	footer .social a{padding-right:10px;}
+	footer .logo {
+    	max-width: 100px;
+	}
+}
+@media (min-width: 1200px){
+	footer .social a {
+    	padding-right: 30px;
+	}
+}
+</style>
+</head>
+<body>
+<div id="page-wrapper">
+	<header id="header" class="bg-white">
+	<div class="container">
+		<img class="logo" src="../images/TrilogyEd.svg">
+	</div>
+</header>
+
+
+<section class=hero>
+ <div class="overlay"></div>
+  <div class="container">
+    <div class="row flex-md">
+	 <div class="col-sm-6 vert-center-md col-xs-12">
+		<div>
+			<h1>Put your creativity to work solving real-world design problems</h1>
+			<p>Throughout the UX/UI Boot Camp, you will build a portfolio made up of three design studio projects that showcase the fundamental skills learned in user experience design, user interface design, and front end development.</p>
+		</div>
+	 </div>
+	 <div class="col-sm-6 col-xs-12 image">
+		 <img src="../images/ux-ui/mobile.svg">
+		</div>
+	</div>
+  </div>
+</section>
+
+<section class="bg-grey padding-md project-types">
+	<div class=container>
+	<div class=row>
+		<div class=col-sm-4><h3>Mobile App Design Project</h3><p>The first project will turn market research into insights and ideas through storyboarding, user journey mapping, and usability testing. You will leverage tools like Adobe XD or Figma and iOS and Material Design guidelines to build a clickable prototype.</p></div>
+		<div class=col-sm-4><h3>Nonprofit Site Redesign Project</h3><p>On the second project, teams will collaborate to redesign a nonprofit website. You will leverage UI design fundamentals and best practices in usability heuristics and information architecture to create a clickable prototype with InVision, Adobe XD, and Figma.</p></div>
+		<div class=col-sm-4><h3>Build Your Cause Project</h3><p>The capstone project will be an open design challenge where you choose a business or cause of interest and recreate the experience. A combination of UX, UI, and front end coding skills will be leveraged to create a live website prototype that creatively solves human-centered needs.</p></div>
+	</div>
+	<div class="row" style="padding-top:20px;">
+		<div class="col-md-8 col-md-offset-2">
+			<p class=text-center style="font-size:12px;">Each project is supported by industry professional instructors, trained UX TAs and tutors, classmates who help provide creative feedback, and career servvices team which helps polish learners' portfolios for professional interviews.</p>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+
+<section>
+<div class="container-fluid">
+<div class="container" style="margin-top:25px;">
+	<div class="portfolio-heading"><h3>Portfolio</h3> <span>Student Project Gallery</span></div>
+	<div class="row projects">
+		<div class="col-sm-4 col-xs-12">
+			<div class="card">
+				<img src="../images/ux-ui/plantio.jpg">
+				<div class="inner">
+					<h2>Plantio</h2> 
+					<h3>Mobile App Design Project </h3>
+					<div class="content">
+						<p>The Plantio team created an interactive and intuitive mobile app to help plant owners tend to the unique needs of a variety of plants.</p>
+					</div>
+					<h4 class="byline">
+						<b>Created by</b>:<br>
+						Stefan Pastashvili and Jenny Huang
+					</h4>
+					
+					<a target=_blank href="https://docs.google.com/presentation/d/1A_MOSIsltuJNNLINAbZ9ng9PChSvNnrjfagVd4Nn2NA/edit?usp=sharing">Presentation</a>
+					<br/>
+					<a target=_blank href="https://www.figma.com/proto/xBLaKNFNCqkTqlNKtnw4fv/Plant-IO?node-id=166%3A1565&scaling=scale-down">Prototype: Mobile</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="card">
+				<img src="../images/ux-ui/bank.jpg">
+				<div class="inner">
+					<h2>Atlanta Community Food Bank</h2> 
+					<h3>Nonprofit Redesign Project </h3>
+					<div class="content">
+						<p>This team helped this local nonprofit optimize their website’s design focusing on providing assistance to those in need and allowing donors to support.</p>
+					</div>
+					<h4 class="byline">
+						<b>Created by</b>:<br>
+						Meg Ryan, Chase Hart, and Thao Nguyen
+					</h4>
+					
+					<a href="https://drive.google.com/file/d/1pDkpZm2Ffv7LsqMAAgJSkqAjVVIggiw_/view?usp=sharing">Presentation</a>
+					<br/>
+					<a href="https://drive.google.com/file/d/1Fc1YWs_9ShNNlfOZs-TbmOHUKvpDSCDn/view?usp=sharing">Prototype: Desktop</a>
+					<br/>
+					<a href="https://drive.google.com/file/d/1S4NTrNjNpucaaGTz_yS4k_zi8lpTU9pX/view?usp=sharing">Prototype: Mobile</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="card">
+				<img src="../images/ux-ui/bipoc.jpg">
+				<div class="inner">
+					<h2>Shop BIPOC</h2> 
+					<h3>Build Your Cause Project </h3>
+					<div class="content">
+						<p>The Shop BIPOC team found inspiration by celebrating diversity and their passion for creating empowerment in the BIPOC community. </p>
+					</div>
+					<h4 class="byline">
+						<b>Created by</b>:<br>
+						Bonica Ayala, Erica Brown, Leah Liu, Rashida Zahid, and Rita Almusa
+					</h4>
+					
+					<a href="https://drive.google.com/file/d/1MwwEY6qw6xrGpImTYBiMor-Qt6rDnktw/view?usp=sharing">Presentation</a>
+					<br/>
+					<a href="https://drive.google.com/file/d/1rYmXXnIdgOTrzDqYvFTrT_gtvHANlPNL/view?usp=sharing">Prototype: Desktop</a>
+					<br/>
+					<a href="https://drive.google.com/file/d/1rcUqB7jiUl36EUxNkpghomkPgaQylhfz/view?usp=sharing">Prototype: Mobile</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+
+<!-- Close page-wrapper -->
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+				<img class="logo" src="../images/TrilogyEd_Dark.svg" alt="Trilogy Education Services">
+			</div>
+            <div class="col-sm-4">
+                <ul class="footer-menu">
+                    <li><a href="https://www.trilogyed.com/">Home</a></li>
+                    <li><a href="https://www.trilogyed.com/programs/">Programs</a></li>
+                    <li><a href="https://www.trilogyed.com/universities/">Universities</a></li>
+                    <li><a href="https://www.trilogyed.com/employers/">Employers</a></li>
+                    <li><a href="https://www.trilogyed.com/students/">Students</a></li>
+                    <li><a href="https://www.trilogyed.com/blog/">Blog</a></li>                    
+                    <li><a href="https://www.trilogyed.com/about/">About</a></li>
+					<li><a href="https://www.trilogyed.com/about/careers/">Careers</a></li>
+                    <li><a href="https://www.trilogyed.com/press-room/">Press Room</a></li>
+                    <li><a href="https://www.trilogyed.com/about/contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <p class="address">
+                    31 E 32nd St, 10th floor<br>
+                    New York, NY 10016
+                </p>
+                <a target="_blank" href="https://www.google.com/maps/search/?api=1&amp;query=31+E.+32nd+Street%2C+Suite+1202%2C+New+York%2C+NY%2C+10016">Get Directions</a>
+            </div>
+            <div class="col-sm-2 social">
+                <div>
+                    <a target="_blank" href="https://www.facebook.com/trilogyed/" aria-label="facebook trilogy"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://twitter.com/trilogyedu" aria-label="twiter trilogy"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/trilogy-education-services" aria-label="linkedin trilogy"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="ta-container">
+            <div class="copyright">© 2020 Trilogy Education Services, <br class="visible-xs">a 2U, Inc. brand.&nbsp;&nbsp;All rights Reserved.</div><br>
+            <div class="links">
+				<a href="https://www.trilogyed.com/wp-content/uploads/2018/08/Terms-of-Service-.pdf" target="_blank">Terms of Use</a>
+				<a href="https://www.trilogyed.com/wp-content/uploads/2019/12/Trilogy-Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
+				<a href="https://www.trilogyed.com/about/contact/" target="_blank">Contact Us</a>
+			</div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

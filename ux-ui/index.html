@@ -124,20 +124,27 @@ section.project-cards .portfolio-heading h3 {
 	display: inline-block;
 	font-size: 22px;
 	font-weight: bold;
+	margin-bottom: 30px;
 }
 section.project-cards .portfolio-heading span {
 	font-size: 18px;
 }
+section.project-cards .col-xs-12 {
+	margin-bottom: 15px;
+}
 section.project-cards .card {
 	height: 100%;
-	margin: 15px auto;
-	background-color: #fff;
-	box-shadow: 0 0 20px 7px rgba(0,0,0,0.075);
-	padding-bottom: 10px;
+	margin: 0 auto;
+	background-color: #F8F5F5;
+	/*box-shadow: 0 0 20px 7px rgba(0,0,0,0.075);*/
+
+	padding-bottom: 0;
 	position: relative;
 	padding-top: 200px;
+	padding-top: 50vw;
 	font-size: 14px;
 }
+
 section.project-cards .card a {
 	font-size: 14px;
 	line-height: 20px;
@@ -170,6 +177,7 @@ section.project-cards .card img {
 	right: 0;
 	width: 100%;
 	height: 200px;
+	height: 50vw;
 	object-fit: cover;
 	object-position: top;
 	position: absolute;
@@ -257,7 +265,11 @@ footer .address, footer .footer-menu a {
 		margin-top: 30px;
 	}
 	/* cards */
+	section.project-cards .col-xs-12 {
+		margin-bottom: 30px;
+	}
 	section.project-cards {padding: 40px 15px}
+	
 	/* project-types */
 	section.project-types {padding: 40px 15px;}
 	section.project-types .last-card {padding: 0 30px;}
@@ -283,9 +295,27 @@ footer .address, footer .footer-menu a {
 		line-height: 40px;
 	}
 	/* cards */
+	
 	section.project-cards {padding: 40px 0;}
+	section.project-cards .col-xs-12 {
+		margin-bottom: 0;
+	}
+	section.project-cards .row.projects {
+		display: flex;
+	}
+	section.project-cards .row.projects .col-sm-4{
+		flex: 1;
+	}
+	section.project-cards .card {
+		margin: 0;
+		padding-top: 124px;
+		padding-top: 16vw;		
+	}
+	section.project-cards .card img {
+		height: 124px;
+		height: 16vw;
+	}
 	section.project-cards .portfolio-heading h3 {font-size: 26px;}
-	section.project-cards .col-sm-4 {height: 622px;}
 	/* project types  */
 	section.project-types .last-card {
 		max-width: 750px;
@@ -339,11 +369,23 @@ footer .address, footer .footer-menu a {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	section.project-types h3 {
+		font-size: 20px;
+		line-height: 24px;
+	}
 	section.project-types p {
 		font-size: 16px;
 		line-height: 24px;
 	}
 	/* project cards */
+	section.project-cards .card {
+		padding-top: 124px;
+		padding-top: 16vw;		
+	}
+	section.project-cards .card img {
+		height: 124px;
+		height: 16vw;
+	}
 	section.project-cards .card .inner .byline,
 	section.project-cards .card {font-size: 16px;}
 	section.project-cards .card .inner .content {min-height: 130px;}
@@ -369,6 +411,14 @@ footer .address, footer .footer-menu a {
 	footer .social a i {
 		font-size: 30px;
 		padding: 0 15px;
+	}
+}
+@media (min-width: 1200px) {
+	section.project-cards .card {
+		padding-top: 200px;	
+	}
+	section.project-cards .card img {
+		height: 200px;
 	}
 }
 </style>

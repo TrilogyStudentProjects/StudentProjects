@@ -1,0 +1,82 @@
+section.sp_hero {
+    margin-bottom: 45px;
+    .sp_hero-left-container {
+        .sp_hero-logo-container {
+            text-align: center;
+            .sp_hero-logo {
+                width: 176px;
+                padding: 40px 0;
+            }
+        }
+        .sp_hero-text-container {
+            .sp_hero-p {
+                padding-top: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .sp_hero-right-container {
+        .sp_hero-img-container {
+            text-align: center;
+            .sp_hero-img {
+                padding-top: 30px;
+                max-width: 290px;
+            }
+        }
+    }
+    @include screen(480){
+        .sp_hero-right-container {
+            .sp_hero-img-container {
+                .sp_hero-img {
+                    max-width: 390px;
+                }
+            }
+        }
+    }
+    @include screen('sm'){
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 60px;
+        .sp_hero-left-container {
+            .sp_hero-logo-container {
+                text-align: left;
+                .sp_hero-logo {
+                    width: 220px;
+                    padding: 90px 0 90px 0;
+                }
+            }
+            .sp_hero-text-container {
+                width: 720px;
+                .sp_hero-p {
+                    padding-top: 30px;
+                }
+            }
+        }
+        .sp_hero-right-container {
+            .sp_hero-img-container {
+                .sp_hero-img {
+                    padding-top: 100px;
+                    max-width: 348px;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    @include screen('md'){
+        padding: 0 15px;
+    }
+    @include screen('lg'){
+        .sp_hero-left-container {
+            .sp_hero-text-container {
+                width: auto;
+            }
+        }
+        .sp_hero-right-container {
+            .sp_hero-img-container {
+                .sp_hero-img {
+                    max-width: 480px;
+                }
+            }
+        }
+    }
+}

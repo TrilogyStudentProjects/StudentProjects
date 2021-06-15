@@ -1,0 +1,192 @@
+section.sp_explore {
+    background-color: $c3;
+    padding: 45px 0;
+    &:last-child {
+        padding-bottom: 60px;
+    }
+    .sp_explore-container {
+        .sp_explore-title-container {
+            .sp_explore-title {
+                margin-bottom: 30px;
+            }
+        }
+        .sp_explore-subtitle-container {
+            &.second {
+                margin-top: 60px;
+            }
+            .sp_explore-subtitle {
+                margin-bottom: 10px;
+            }
+            .sp_explore-hr {
+                color: $c1;
+                height: 2px;
+                margin-bottom: 20px;
+            }
+        }
+        .sp_explore-text-container {
+            .assignment {font-weight: 700;}
+            .project-desc {font-weight: 500;}
+            .sp_explore-p-text {font-weight: 300;}
+        }
+        .sp_explore-cards-container {
+            margin-top: 45px;
+            // carousel 
+            .cards-container {
+                padding: 0;
+                .col-container {
+                    padding-bottom: 60px;
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                    .card {
+                        max-width: 540px;
+                        margin: 0 auto;
+                        box-shadow: rgba(0, 0, 0, 0.05) 0px 0.1rem 0.3rem, rgba(0, 0, 0, 0.05) 0px 0.1rem 0.2rem, rgba(0, 0, 0, 0.05) 0px 0.5rem 1.5rem;
+                        border: none;
+                        .card-img-top {
+                            cursor: pointer;
+                            border-radius: 0;
+                        }
+                        .card-body {
+                            margin-top: 20px;
+                            .card-title {
+                                margin-bottom: 0;
+                                .project-name-title {
+                                    font-weight: 700;
+                                }
+                            }
+                            .card-text {
+                                .project-type-title {
+                                    font-weight: 700;
+                                }
+                            }
+                            .card-btn {
+                                display: block;
+                                font-size: 14px;
+                                margin: 35px auto 25px auto;
+                                height: 40px;
+                                width: 160px;
+                                background-color: $c1;
+                                border-color: $c1;
+                                padding: 9px 0;
+                                &:hover {
+                                    background-color: #FFF;
+                                    color: $c1;
+                                }
+                            }
+                        }
+                    }
+                }
+                @include screen('sm'){display: block;}
+            }            
+            .carousel-mobile {  
+                background-color: #FFF;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 0.1rem 0.3rem, rgba(0, 0, 0, 0.05) 0px 0.1rem 0.2rem, rgba(0, 0, 0, 0.05) 0px 0.5rem 1.5rem;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                padding-bottom: 20px;
+                @include screen('sm'){display: none;}
+            }
+            .carousel-inner {
+                .carousel-item {
+                    background-color: #FFF;                    
+                    .carousel-body {
+                        margin-top: 20px;
+                        padding: 20px;
+                        .carousel-title {
+                            margin-bottom: 0;
+                            .project-name-title {
+                                font-weight: 700;
+                            }
+                        }
+                        .carousel-text {
+                            .project-type-title {
+                                font-weight: 700;
+                            }
+                        }
+                        .carousel-btn {
+                            display: block;
+                            font-size: 14px;
+                            margin: 40px auto 25px auto;
+                            width: 160px;
+                            background-color: $c1;
+                            border-color: $c1;
+                            padding: 9px 0 8px;
+                            &:hover {
+                                background-color: #FFF;
+                                color: $c1;
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel-indicators {
+                position: relative;
+                [data-bs-target] {
+                    background-color: transparent;
+                    border-radius: 5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 11px;
+                    border: 1px solid $c2;
+                    opacity: 1;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    &.active {
+                        background-color: $c2;
+                        color: $c2;
+                    }
+                }
+            }
+        }
+    }
+    @include screen('sm'){
+        padding: 60px 0;
+
+        .sp_explore-container {
+            padding-left: 0;
+            padding-right: 0;
+            .sp_explore-subtitle-container {
+                margin-top: 30px;
+                &.second {margin-top: 60px;}
+            }
+            .sp_explore-title-container {
+                .sp_explore-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    @include screen('md'){
+        padding: 90px 0;
+        .sp_explore-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .sp_explore-cards-container {
+            .cards-container {
+                .col-container {
+                    .card {
+                        width: 358px;
+                        margin: 0 auto;
+                    }
+                }
+            }            
+        }
+    }
+    @include screen('lg'){
+        .sp_explore-cards-container {
+            .cards-container {
+                .col-container {
+                    .card {
+                        width: 420px;
+                    }
+                }
+            }            
+        }
+    }
+}
+#cards-2 {
+    padding-bottom: 0;
+    @include screen('md') {padding-bottom: 15px;}
+}

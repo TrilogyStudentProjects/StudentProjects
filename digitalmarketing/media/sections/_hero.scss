@@ -10,7 +10,7 @@ section.sp_hero {
         }
         .sp_hero-text-container {
             .sp_hero-p {
-                padding-top: 30px;
+                padding-top: 20px;
                 margin-bottom: 0;
             }
         }
@@ -36,13 +36,13 @@ section.sp_hero {
     @include screen('sm'){
         padding-left: 0;
         padding-right: 0;
-        margin-bottom: 90px;
+        margin-bottom: 60px;
         .sp_hero-left-container {
             .sp_hero-logo-container {
                 text-align: left;
                 .sp_hero-logo {
                     width: 220px;
-                    padding: 90px 0 45px 0;
+                    padding: 90px 0 90px 0;
                 }
             }
             .sp_hero-text-container {
@@ -57,6 +57,7 @@ section.sp_hero {
                 .sp_hero-img {
                     padding-top: 100px;
                     max-width: 348px;
+                    padding-right: 20px;
                 }
             }
         }

@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    var domain = window.location.hostname;
-    var urlToOpenPdf = "http://docs.google.com/gview?embedded=true&url=https://"+domain+"/assets/pdf/";
     //** Array with all cards info
     var cards_info = [
         {
@@ -32,11 +30,6 @@ $(document).ready(function(){
             pdf_src: "Loyalty_Caribou_Coffee.pdf#zoom=FitH",
         }
     ];
-
-    // Iframes SRC 
-    $('iframe').each(function(index){
-        $(this).attr('src',urlToOpenPdf+cards_info[index].pdf_src);
-    })
 
     var cards_info_half = Math.ceil(cards_info.length / 2);
     //** Array with 1st half cards info for first Row
@@ -136,10 +129,6 @@ $(document).ready(function(){
         });
     })
 
-    // When close Modal 
-    $(".modal").on('hidden.bs.modal', function () {
-    });
- 
     // FOOTER
     var d = new Date(), output = d.getFullYear();        
     $("#year").text(output);

@@ -1,0 +1,38 @@
+// Fonts 
+$font-primary: museo-sans, sans-serif;
+$font-secondary: freight-micro-pro, serif;
+
+// Colors 
+$c1: #28C8E5;
+$c2: #333333;
+$c3: #F8F5F5;
+
+// Titles
+.title {
+    color: $c1;
+    font-size: 30px;
+    line-height: 38px;
+    @include screen('sm') {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+.subtitle {
+    color: $c2;
+    font-size: 20px;
+    line-height: 28px;
+    @include screen('sm') {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+.text {
+    font-size: 14px;
+    line-height: 20px;
+    @include screen('sm') {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

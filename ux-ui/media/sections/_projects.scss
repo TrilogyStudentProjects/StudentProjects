@@ -1,0 +1,47 @@
+section.projects {
+    background-color: $c3;
+    padding: 45px 0;
+    h3 {
+        font-size: 18px;
+        line-height: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 700
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .last-card {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+        p {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0;
+        }
+    }
+    @include screen('sm'){
+        padding: 60px 0;
+        .last-card {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+    }
+    @include screen('md'){
+        padding: 90px 0;
+        .col-md-4 {
+            padding: 0 20px;
+            margin-bottom: 35px;
+            h3 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}

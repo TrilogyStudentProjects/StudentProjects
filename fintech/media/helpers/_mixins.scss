@@ -1,0 +1,110 @@
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin screen($size) {
+    $screen-xs:  "(min-width: 320px)";
+    $screen-480: "(min-width: 480px)";
+    $screen-sm:  "(min-width: 768px)";
+    $screen-md:  "(min-width: 992px)";
+    $screen-lg:  "(min-width: 1200px)";
+    @if $size == lg {
+      @media #{$screen-lg} {
+        @content;
+      }
+    }
+    @else if $size == md {
+      @media #{$screen-md} {
+        @content;
+      }
+    }
+    @else if $size == sm {
+      @media #{$screen-sm} {
+        @content;
+      }
+    }
+    @else if $size == 480 {
+      @media only  #{$screen-480} {
+        @content;
+      }
+    }
+    @else if $size == xs {
+      @media #{$screen-xs} {
+        @content;
+      }
+    }
+    @else {
+      @media #{$size} {
+        @content;
+      }
+    }
+}
+
+@mixin titles($color) {
+  color: $color;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 42px;
+
+  @include screen('sm'){
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  @include screen('md'){
+    font-size: 50px;
+    line-height: 60px;
+  }  
+}
+
+@mixin subtitles($color) {
+  color: $color;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+
+  @include screen('sm'){
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @include screen('md'){
+    font-size: 30px;
+    line-height: 34px;
+  }  
+}
+
+@mixin content($color) {
+  color: $color;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include screen('md'){
+    font-size: 18px;
+    line-height: 26px;
+  }  
+}

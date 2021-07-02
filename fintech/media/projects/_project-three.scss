@@ -70,6 +70,115 @@
             }
         }
     }
+    .nasdaq_repo-container {
+        .nasdaq_repo-subtitle {
+            margin-bottom: 30px;
+        }
+        .nasdaq_repo-img-container {
+            text-align: center;
+            .nasdaq_repo-img {
+                margin-bottom: 30px;
+            }
+            .mobile {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+        }
+        .nasdaq_repo-ul {
+            padding-left: 10px;
+            li {
+                margin-top: 20px;
+                font-size: 14px;
+                &::marker {
+                    color: $c1;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .nasdaq_process-container {
+        .nasdaq_process-subtitle {
+            margin-bottom: 30px;
+        }
+        .nasdaq_process-img-container {
+            text-align: center;
+            margin-bottom: 20px;
+            .nasdaq_process-img {
+                max-width: 260px;
+                margin: 0 auto;
+                @include screen(480){max-width: 360px;}
+            }
+        }
+        .nasdaq_process-ul {
+            font-size: 14px;
+            li {margin-top: 10px;}
+            @include screen('sm'){font-size: 16px;}
+            @include screen('md'){
+                display: flex;
+                li {width: 33%;}
+            }
+        }
+        .nasdaq_process-ul-future {
+            padding-left: 28px;
+            li {
+                font-size: 14px;
+                margin-bottom: 10px;
+                &::marker {
+                    color: $c1;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+            @include screen('sm'){
+                li {font-size: 16px;}
+            }
+        }
+        .nasdaq_process-ol {
+            padding-left: 15px;
+            li {
+                margin-top: 20px;
+                font-size: 14px;
+                &::marker {
+                    color: $c1;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+            @include screen('sm'){
+                li {font-size: 16px;}
+            }
+        }
+    }
+    .nasdaq_results-container {
+        background-color: #F8F5F5;
+        .nasdaq_results-img-container {
+            text-align: center;
+            margin-bottom: 20px;
+            .nasdaq_results-img {
+                max-width: 260px;
+                margin: 0 auto;
+                @include screen(480){max-width: 360px;}
+            }
+        }
+    }
+    .nasdaq_takeaway-container {
+        .nasdaq_takeaway-ol {
+            padding-left: 15px;
+            li {
+                margin-top: 20px;
+                font-size: 14px;
+                &::marker {
+                    color: $c1;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+            @include screen('sm'){
+                li {font-size: 16px;}
+            }
+        }
+    }
     @include screen('sm'){
         .nasdaq_container {
             padding: 35px;

@@ -39,16 +39,17 @@
             <div class="nasdaq_repo-container nasdaq_container">
                 <h1 class="nasdaq_repo-subtitle subtitle">Contents of Repository</h1>
                 <div class="nasdaq_repo-img-container">
-                    <img class="nasdaq_repo-img" src="assets/graph_aws_architecture.svg">
+                    <img class="nasdaq_repo-img d-none d-md-block desktop" src="assets/graph_aws_architecture.svg">
+                    <img class="nasdaq_repo-img d-block d-md-none mobile" src="assets/graph_aws_architecture_v.svg">
                 </div>
                 <div class="nasdaq_repo-row row">
-                    <div class="nasdaq_repo-row-col col-xs-12 col-sm-6">
+                    <div class="nasdaq_repo-row-col col-xs-12 col-md-6">
                         <ol class="nasdaq_repo-ul">
                             <li><strong>handler: </strong>Contains the necessary libraries that are required for the model to operate in AWS infrastructure, as well as an older version of the model (handler.py) which runs on a local machine but not AWS.</li>
                             <li><strong>docker_deploy: </strong>Contains the most up-to-date model and necessary libraries that were executed on AWS Lambda (handler.zip), as well as the file necessary for deployment on AWS (Makefile).</li>
                         </ol>
                     </div>
-                    <div class="nasdaq_repo-row-col col-xs-12 col-sm-6">
+                    <div class="nasdaq_repo-row-col col-xs-12 col-md-6">
                         <ol start="3" class="nasdaq_repo-ul">
                             <li><strong>NASDAQ-historical-data: </strong>Contains historical data for the Nasdaq that the model is training and testing on, both as individual days and aggregated.</li>
                             <li><strong>Images: </strong> Images used in the repository.</li>
@@ -57,14 +58,14 @@
                 </div>
             </div>
             <div class="nasdaq_process-container nasdaq_container">
-                <h1 class="nasdaq_solution-subtitle subtitle">Process of Creating the Model</h1>
+                <h1 class="nasdaq_process-subtitle subtitle">Process of Creating the Model</h1>
                 <div class="nasdaq_process-row row">
-                    <div class="nasdaq_process-row-col col-xs-12 col-sm-6">
-                        <div class="nasdaq_process-img-container">
+                    <div class="nasdaq_process-row-col col-xs-12 column-one col-lg-6">
+                        <div class="nasdaq_process-img-container d-none d-lg-block">
                             <img class="nasdaq_process-img img-fluid" src="assets/project3_image2.jpg">
                         </div>
                     </div>
-                    <div class="nasdaq_process-row-col col-xs-12 col-sm-6">
+                    <div class="nasdaq_process-row-col col-xs-12 column-two col-lg-6">
                         <p class="nasdaq_process-p text">As with all models, model quality relies on your data. We were able to find historical data for all Nasdaq tickers as of July 2020, with the ability to backtest for 10 years. We focused on YTD information so that we were able to factor in pandemic volatility.</p>
                         <p class="nasdaq_process-p text">It took some time to work with the dataset but, after we had a clean Pandas DataFrame, we were able to view each ticker’s “close” price. We were then able to calculate daily returns, including a shift to account for bias.</p>
                         <p class="nasdaq_process-p text">We chose Random Forest Classifier to accomplish this task for two reasons:</p>
@@ -72,21 +73,26 @@
                             <li>There were plenty of data points for the model to learn.</li>
                             <li>The data contained a couple of significant events such as:</li>
                         </ol>
-                        <ul class="nasdaq_process-ul d-flex">
+                        <ul class="nasdaq_process-ul">
                             <li>Pre COVID</li>
                             <li>COVID Crash</li>
                             <li>COVID Recovery</li>
                         </ul>
                     </div>
                     <p class="nasdaq_process-p text">After testing the model, we were able to predict returns with 100% accuracy, so naturally we believed something had to be wrong. We spent all of our time on AWS Sagemaker, a service provided by Amazon that allows you to prepare, build, train, and deploy machine learning models on the cloud.! AWS also offers access to their computing power. Here is an example above of what some of the code looks like.</p>
+                    <div class="nasdaq_process-img-container d-block d-lg-none">
+                        <img class="nasdaq_process-img img-fluid " src="assets/project3_image2.jpg">
+                    </div>
                     <p class="nasdaq_process-p text">Once we had the model trained and running without error, the team got together and uploaded the files through AWS S3 and passed our data into an AWS Lambda function. To finish, the “Makefile” had to run through CloudWatch SNS in order to make the daily or weekly email alert possible. This step provided us with the opportunity to receive feedback and connect with subscribers. To get an idea of what this looks like, here is a chunk of the code in cells compared to what it looks like in a function:</p>
                     <div class="nasdaq_process-img-laptops-container">
-                        <img class="nasdaq_process-img img-fluid" src="assets/project3_image3.jpg">
+                        <img class="nasdaq_process-img d-block d-md-none img-fluid" src="assets/project3_image3a_m.jpg">
+                        <img class="nasdaq_process-img d-block d-md-none img-fluid" src="assets/project3_image3b_m.jpg">
+                        <img class="nasdaq_process-img d-none d-md-block img-fluid" src="assets/project3_image3.jpg">
                     </div>
                     <p class="nasdaq_process-p text"><strong>Deploying the Model</strong></p>
                     <p class="nasdaq_process-p text">For the model to be useful, it needed to be deployable. Again, we opted to use AWS to execute the model once a day. We ran into a potential issue with our file sizes, in particular the data and imported libraries. To solve this problem, we uploaded the data separately on S3, and then we used CloudWatch to configure the daily emails. After debugging, we were able to deploy and the email was requested.</p>
-                    <p class="nasdaq_process-p text"><strong>Deploying the Model</strong></p>
-                    <ol class="nasdaq_process-ul">
+                    <p class="nasdaq_process-p text"><strong>Future Improvements</strong></p>
+                    <ol class="nasdaq_process-ul-future">
                         <li>Incorporate a regressor and train the data using different models like Autoregressive Integrated Moving Average (ARIMA).</li>
                         <li>Improve email messaging to enhance user experience.</li>
                         <li>Limit the number of tickers that our function returns to the top 15 companies.</li>
@@ -94,15 +100,15 @@
                 </div>
             </div>
             <div class="nasdaq_results-container nasdaq_container">
-                <h1 class="nasdaq_results-subtitle subtitle text-center">Results</h1>
+                <h1 class="nasdaq_results-subtitle subtitle">Results</h1>
                 <div class="nasdaq_results-row row">
-                    <div class="nasdaq_results-col text-center column-one col-xs-12 col-sm-6">
+                    <div class="nasdaq_results-col column-one col-xs-12 col-md-6">
                         <p class="nasdaq_results-p text">The results of the model accuracy are below:</p>
-                        <img class="nasdaq_results-img img-fluid" src="assets/project3_image4.jpg">
+                        <img class="nasdaq_results-img img-fluid" src="assets/project3_image4.png">
                     </div>
-                    <div class="nasdaq_results-col text-center column-two col-xs-12 col-sm-6">
+                    <div class="nasdaq_results-col column-two col-xs-12 col-md-6">
                         <p class="nasdaq_results-p text">Additionally, here is an example of what the email subscribers receive:</p>
-                        <img class="nasdaq_results-img img-fluid" src="assets/project3_image5.jpg">
+                        <img class="nasdaq_results-img img-fluid" src="assets/project3_image5.png">
                     </div>
                 </div>
             </div>

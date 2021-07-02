@@ -1,5 +1,5 @@
 #toke {
-    margin-top: 45px;
+    margin-top: 45px+56px;
     margin-bottom: 55px;
     .toke_title-container {
         .toke_title {
@@ -85,7 +85,7 @@
         }
     }
     @include screen('md'){
-        margin-top: 70px;
+        margin-top: 70px+56px;
         margin-bottom: 80px;
         .toke_title-container {
             .toke_title {

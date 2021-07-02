@@ -107,9 +107,9 @@
                     </div>
                     <p class="nasdaq_process-p text">Once we had the model trained and running without error, the team got together and uploaded the files through AWS S3 and passed our data into an AWS Lambda function. To finish, the “Makefile” had to run through CloudWatch SNS in order to make the daily or weekly email alert possible. This step provided us with the opportunity to receive feedback and connect with subscribers. To get an idea of what this looks like, here is a chunk of the code in cells compared to what it looks like in a function:</p>
                     <div class="nasdaq_process-img-laptops-container">
-                        <img class="nasdaq_process-img d-block d-md-none img-fluid" src="assets/project3_image3a_m.jpg">
-                        <img class="nasdaq_process-img d-block d-md-none img-fluid" src="assets/project3_image3b_m.jpg">
-                        <img class="nasdaq_process-img d-none d-md-block img-fluid" src="assets/project3_image3.jpg">
+                        <img class="nasdaq_process-img mobile d-block d-md-none img-fluid" src="assets/project3_image3a_m.jpg">
+                        <img class="nasdaq_process-img mobile d-block d-md-none img-fluid" src="assets/project3_image3b_m.jpg">
+                        <img class="nasdaq_process-img desktop d-none d-md-block img-fluid" src="assets/project3_image3.jpg">
                     </div>
                     <p class="nasdaq_process-p text"><strong>Deploying the Model</strong></p>
                     <p class="nasdaq_process-p text">For the model to be useful, it needed to be deployable. Again, we opted to use AWS to execute the model once a day. We ran into a potential issue with our file sizes, in particular the data and imported libraries. To solve this problem, we uploaded the data separately on S3, and then we used CloudWatch to configure the daily emails. After debugging, we were able to deploy and the email was requested.</p>

@@ -111,6 +111,18 @@
                 @include screen(480){max-width: 360px;}
             }
         }
+        .nasdaq_process-img-laptops-container {
+            text-align: center;
+            margin-bottom: 20px;
+            .nasdaq_process-img.mobile {
+                max-width: 260px;
+                margin: 0 auto;
+                @include screen(480){max-width: 360px;}
+            }
+            .nasdaq_process-img.desktop {
+                margin: 0 auto;
+            }
+        }
         .nasdaq_process-ul {
             font-size: 14px;
             li {margin-top: 10px;}

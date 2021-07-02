@@ -1,73 +1,29 @@
-.modal.show {
-    .modal-dialog {
-        margin: 20px auto !important;
-        max-width: 100%;
-        margin: 0;
-        @media (min-width: 992px) {
-            max-width: 960px;
-        }
-        @media (min-width: 1200px) {
-            max-width: 1160px;
-        }
-        @media (min-width: 1500px) {
-            max-width: 1400px;
-        }
-        .modal-content {
-            background-color: transparent;
-            border: none !important;
-            .modal-header {
-                border: none;
-                padding-bottom: 0;
-                .modal-title {
-                    color: white;
-                    font-weight: bold;
-                    font-size: 16px;
-                    line-height: 18px;
-                }
+.modal-2 {
+    .modal-body {
+        color: #333;
+        .modal-objective-container {
+            margin-top: 35px;
+            background-color: #F8F5F5;
+            padding: 20px;
+            .modal-objective-p-text {
+                font-weight: 300;
             }
-            .modal-body {
-                padding-top: 5px;
-                .nav-tabs {border: none;}
-                .nav-link {
-                    color: #EBEBEB;
-                    font-size: 14px;
-                    font-weight: 700;
-                    line-height: 18px;
-                    padding-left: 0;
-                    padding-right: 0;
-                    padding-bottom: 15px;
-                    border: none !important;
-                    &:hover {
-                        border: none;
-                        color: $c1;
-                    }
-                    &.active {
-                        background-color: transparent;
-                        border: none;
-                        color: white;
-                        color: $c1;
-                        &:hover {
-                            border: none;
-                            color: white;
-                        }
-                    }
-                }
-                .separator {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    padding-top: 4px;
-                    color: white;
-                }
-                iframe {
-                    width: 100%;
-                    height: 80vh;
-                }
-                video {
-                    width: 100%;
-                    // height: 84vh;
-                    overflow: auto;
-                }
+        }
+        .modal-problem-container {
+            margin-top: 15px;
+            padding: 20px;
+            .modal-problem-p-text {
+                font-weight: 300;
             }
+        }
+        .modal-problem-key-indicators-container {
+            .modal-problem-key-indicators-title {
+                font-weight: bold;
+            }
+        }
+        .modal-questions-container {
+            padding: 20px;
+            background-color: #F8F5F5;
         }
     }
 }

@@ -1,23 +1,29 @@
-// //** HELPERS
+//** HELPERS
 @import "helpers/mixins";
  
-// //** BASE
+//** BASE
 // @import "base/vars"; 
 
-// //** FONTS
+//** FONTS
 @import "base/vars";
 
-// //** VENDORS
+//** VENDORS
 // // @import "vendors/bootstrap-5.0.0.beta2";
 
-// //** SECTIONS
+//** SECTIONS
 // @import "sections/global";
 @import "sections/hero";
 @import "sections/section-explore";
 @import "sections/modal";
 
-// //** LAYOUT
+//** LAYOUT
 @import "layout/body";
+@import "layout/nav";
 // @import "layout/header";
 @import "layout/footer";
 // // @import "layout/than-you";
+
+//** PROJECT PAGES
+@import "projects/project-one";
+@import "projects/project-two";
+@import "projects/project-three";

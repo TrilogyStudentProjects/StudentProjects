@@ -1,5 +1,5 @@
 #nasdaq {
-    margin-top: 45px;
+    margin-top: 45px+56px;
     margin-bottom: 55px;
     .nasdaq_title-container {
         .nasdaq_title {
@@ -94,6 +94,7 @@
                     font-weight: bold;
                     font-size: 14px;
                 }
+                @include screen('sm'){font-size: 16px;}
             }
         }
     }
@@ -108,6 +109,18 @@
                 max-width: 260px;
                 margin: 0 auto;
                 @include screen(480){max-width: 360px;}
+            }
+        }
+        .nasdaq_process-img-laptops-container {
+            text-align: center;
+            margin-bottom: 20px;
+            .nasdaq_process-img.mobile {
+                max-width: 260px;
+                margin: 0 auto;
+                @include screen(480){max-width: 360px;}
+            }
+            .nasdaq_process-img.desktop {
+                margin: 0 auto;
             }
         }
         .nasdaq_process-ul {
@@ -194,7 +207,7 @@
         }
     }
     @include screen('md'){
-        margin-top: 70px;
+        margin-top: 70px+56px;
         margin-bottom: 80px;
         .nasdaq_title-container {
             .nasdaq_title {

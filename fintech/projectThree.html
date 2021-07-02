@@ -18,6 +18,28 @@
         <title>Nasdaq Predictive Model</title>
     </head>
     <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <div class="container-fluid fintech-navigation">
+                <div class="fintech-container container">
+                    <div class="row">
+                        <div class="col-2 column-one">
+                            <a href="./index.html"><svg class="img-fluid nav_arrow-back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><a xlink:href="./index.html"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M18,10a8,8,0,1,1-8-8,8,8,0,0,1,8,8m2,0A10,10,0,1,0,10,20,10,10,0,0,0,20,10ZM10,11h4V9H10V6L6,10l4,4Z"/></g></g></a></svg></a>
+                        </div>
+                        <div class="col-5 column-two">
+                            <!-- <span class="nav_arrow-back-text">FinTech Boot Camp Student Projects Page</span> -->
+                            <a href="./index.html"><span class="nav_arrow-back-text">Student Projects Page</span></a>
+                        </div>
+                        <div class="col-3 column-three">
+                            <a href="./projectOne.html"><span class="nav_arrow-back-text">Next Project</span></a>
+                        </div>
+                        <div class="col-2 column-four">
+                            <a href="./projectOne.html"><svg class="img-fluid nav_arrow-foward" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M2,10a8,8,0,1,1,8,8,8,8,0,0,1-8-8M0,10A10,10,0,1,0,10,0,10,10,0,0,0,0,10Zm10,4,4-4L10,6V9H6v2h4Z" /></g></g></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
         <div id="nasdaq" class="container">
             <div class="nasdaq_title-container ">
                 <h1 class="nasdaq_title title">Nasdaq Predictive Model</h1>
@@ -85,9 +107,9 @@
                     </div>
                     <p class="nasdaq_process-p text">Once we had the model trained and running without error, the team got together and uploaded the files through AWS S3 and passed our data into an AWS Lambda function. To finish, the “Makefile” had to run through CloudWatch SNS in order to make the daily or weekly email alert possible. This step provided us with the opportunity to receive feedback and connect with subscribers. To get an idea of what this looks like, here is a chunk of the code in cells compared to what it looks like in a function:</p>
                     <div class="nasdaq_process-img-laptops-container">
-                        <img class="nasdaq_process-img d-block d-md-none img-fluid" src="assets/project3_image3a_m.jpg">
-                        <img class="nasdaq_process-img d-block d-md-none img-fluid" src="assets/project3_image3b_m.jpg">
-                        <img class="nasdaq_process-img d-none d-md-block img-fluid" src="assets/project3_image3.jpg">
+                        <img class="nasdaq_process-img mobile d-block d-md-none img-fluid" src="assets/project3_image3a_m.jpg">
+                        <img class="nasdaq_process-img mobile d-block d-md-none img-fluid" src="assets/project3_image3b_m.jpg">
+                        <img class="nasdaq_process-img desktop d-none d-md-block img-fluid" src="assets/project3_image3.jpg">
                     </div>
                     <p class="nasdaq_process-p text"><strong>Deploying the Model</strong></p>
                     <p class="nasdaq_process-p text">For the model to be useful, it needed to be deployable. Again, we opted to use AWS to execute the model once a day. We ran into a potential issue with our file sizes, in particular the data and imported libraries. To solve this problem, we uploaded the data separately on S3, and then we used CloudWatch to configure the daily emails. After debugging, we were able to deploy and the email was requested.</p>

@@ -12,7 +12,7 @@ $c3: #F8F5F5;
     color: $c1;
     font-size: 30px;
     line-height: 38px;
-    @include screen('sm') {
+    @include screen('sm'){
         font-size: 40px;
         line-height: 48px;
     }

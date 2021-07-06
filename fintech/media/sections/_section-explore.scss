@@ -114,7 +114,7 @@ section.sp_explore {
             padding: 60px 10px;
             &.project-one {
                 .sp_explore-row-img-container {
-                    text-align: left;
+                    text-align: right;
                     .sp_explore-row-img {
                         margin: 0;
                     }
@@ -122,6 +122,9 @@ section.sp_explore {
             }
             &.project-two {
                 background-color: #F8F5F5;
+                .sp_explore-row-img-container {
+                    text-align: left;
+                }
                 .sp_explore-hr {
                     background-color: #FFF;
                     border: 1px solid #FFF;

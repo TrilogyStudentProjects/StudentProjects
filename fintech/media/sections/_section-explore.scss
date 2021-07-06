@@ -42,7 +42,7 @@ section.sp_explore {
             }
             @include screen('sm'){text-align: end;}
         }
-        .view-project-btn {margin-bottom: 45px;}
+        .view-project-btn {margin-bottom: 0;}
         .accordion-item {
             border: none;
             margin-bottom: 5px;
@@ -104,15 +104,17 @@ section.sp_explore {
         }
         .sp_explore-row {
             background-color: #FFF;
-            padding: 60px 10px 30px;
-            &.project-two {
-                background-color: #f8f5f5;
+            padding: 60px 10px;
+            &.project-one {
                 .sp_explore-row-img-container {
                     text-align: left;
                     .sp_explore-row-img {
                         margin: 0;
                     }
                 }
+            }
+            &.project-two {
+                background-color: #F8F5F5;
                 .sp_explore-hr {
                     background-color: #FFF;
                     border: 1px solid #FFF;
@@ -123,14 +125,12 @@ section.sp_explore {
     }
     @include screen('md'){
         padding: 90px 0;
+        .sp_explore-row {
+            padding: 90px 10px;
+        }
         .sp_explore-container {
             padding-left: 15px;
             padding-right: 15px;
-        }
-    }
-    @include screen('lg'){
-        .sp_explore-row {
-            padding: 70px;
         }
     }
 }

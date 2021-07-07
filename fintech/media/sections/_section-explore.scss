@@ -58,12 +58,16 @@ section.sp_explore {
             .accordion-ul {
                 list-style: none;
                 padding-left: 0;
+                margin-bottom: 0;
                 li {
                     margin-bottom: 5px;
                     &::before {
                         content: '●';
                         color: $c1;
                         margin: -10px 5px 5px -15px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -90,10 +94,10 @@ section.sp_explore {
                 background-color: #707070;
             }
             .accordion-button.collapsed::after {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.41 19.41'%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Ccircle cx='9.7' cy='9.7' r='9.7' style='fill:%23fff'/%3E%3Crect x='9.13' y='3.7' width='1.14' height='12' style='fill:%23707070'/%3E%3Crect x='3.7' y='9.13' width='12' height='1.14' style='fill:%23707070'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 22 22' style='enable-background:new 0 0 22 22;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%23707070;%7D%0A%3C/style%3E%3Cg id='Ellipse_6'%3E%3Ccircle class='st0' cx='11' cy='11' r='11'/%3E%3C/g%3E%3Cg id='Group_216'%3E%3Cg id='Line_47'%3E%3Crect x='9.5' y='5' class='st1' width='3' height='12'/%3E%3C/g%3E%3Cg id='Line_48'%3E%3Crect x='5' y='9.5' class='st1' width='12' height='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             }
             .accordion-button:not(.collapsed)::after {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.41 19.41'%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Ccircle cx='9.7' cy='9.7' r='9.7' style='fill:%23fff'/%3E%3Crect x='3.7' y='9.13' width='12' height='1.14' style='fill:%23707070'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 22 22' style='enable-background:new 0 0 22 22;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%23707070;%7D%0A%3C/style%3E%3Ccircle id='Ellipse_6' class='st0' cx='11' cy='11' r='11'/%3E%3Cg id='Group_216'%3E%3Cg id='Line_48'%3E%3Crect x='5' y='9.5' class='st1' width='12' height='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             }
             .accordion-body {margin-left: 10px;}
         }

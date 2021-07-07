@@ -1,5 +1,4 @@
 #crude {
-    margin-top: 45px+56px;
     margin-bottom: 55px;
     .crude_container {
         padding: 30px 15px;
@@ -209,7 +208,6 @@
         }
     }
     @include screen('md'){
-        margin-top: 70px+56px;
         margin-bottom: 80px;
         .crude_title-container {
             .crude_title {

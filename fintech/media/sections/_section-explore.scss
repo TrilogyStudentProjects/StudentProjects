@@ -6,11 +6,15 @@ section.sp_explore {
         @include screen('sm'){padding-bottom: 60px;}
         @include screen('md'){padding-bottom: 90px;}
     }
+    .authors {color: #333;}
     .sp_explore-container {
         .sp_explore-title-container {
             .sp_explore-title {
                 margin-bottom: 30px;
             }
+        }
+        .sp_explore-accordion-container {
+            @include screen('sm'){margin-top: 30px;}
         }
         .sp_explore-hr {
             background-color: #FFF;
@@ -44,7 +48,9 @@ section.sp_explore {
                     max-width: 388px;
                 }
             }
-            @include screen('sm'){text-align: end;}
+            @include screen('sm'){
+                text-align: end;
+            }
         }
         .view-project-btn {
             margin-bottom: 45px;

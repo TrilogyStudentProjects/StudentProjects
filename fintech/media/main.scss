@@ -2,25 +2,16 @@
 @import "helpers/mixins";
  
 //** BASE
-// @import "base/vars"; 
-
-//** FONTS
 @import "base/vars";
 
-//** VENDORS
-// // @import "vendors/bootstrap-5.0.0.beta2";
-
 //** SECTIONS
-// @import "sections/global";
 @import "sections/hero";
 @import "sections/section-explore";
 @import "sections/modal";
 
 //** LAYOUT
 @import "layout/body";
-// @import "layout/header";
 @import "layout/footer";
-// // @import "layout/than-you";
 
 //** PROJECT PAGES
 @import "projects/project-one";

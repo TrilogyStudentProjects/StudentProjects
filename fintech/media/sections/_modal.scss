@@ -1,30 +1,7 @@
-.modal-2 {
-    .modal-body {
-        color: #333;
-        .modal-objective-container {
-            margin-top: 35px;
-            background-color: #F8F5F5;
-            padding: 20px;
-            .modal-objective-p-text {
-                font-weight: 300;
-            }
-        }
-        .modal-problem-container {
-            margin-top: 15px;
-            padding: 20px;
-            .modal-problem-p-text {
-                font-weight: 300;
-            }
-        }
-        .modal-problem-key-indicators-container {
-            .modal-problem-key-indicators-title {
-                font-weight: bold;
-            }
-        }
-        .modal-questions-container {
-            padding: 20px;
-            background-color: #F8F5F5;
-        }
+.modal {
+    padding-right: 0;
+    .modal-dialog {
+        max-width: fit-content;
     }
 }
 

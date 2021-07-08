@@ -63,6 +63,7 @@ section.sp_hero {
         }
     }
     @include screen('md'){
+        margin-bottom: 90px;
         padding: 0 15px;
         .sp_hero-left-container {
             .sp_hero-text-container {

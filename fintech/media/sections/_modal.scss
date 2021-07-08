@@ -3,6 +3,9 @@
     .modal-dialog {
         max-width: fit-content;
     }
+    .modal-header {
+        border-bottom: none;
+    }
 }
 
 .modal-backdrop {

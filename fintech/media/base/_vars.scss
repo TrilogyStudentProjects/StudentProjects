@@ -43,13 +43,11 @@ $c3: #F8F5F5;
     font-size: 14px;
     margin: 35px auto 25px auto;
     height: 40px;
-    width: 160px;
-    background-color: $c1;
+    width: 170px;
     border-color: $c1;
     padding: 9px 0;
-    box-shadow: inset 0 0 0 3px #28c8e5;
     &:hover {
-        background-color: #FFF;
+        background-color: #FFFFFF;
         color: $c1;
         border-color: $c1;
         box-shadow: inset 0 0 0 3px #28c8e5;
@@ -59,3 +57,54 @@ $c3: #F8F5F5;
         margin: 35px 0 25px;
     }
 }
+
+.btn, a.btn:not([href]):not([tabindex]) {
+    color: #fff;
+    box-shadow: inset 0 0 0 3px #28c8e5;
+    background-color: #606060;
+    display: inline-block;
+    vertical-align: middle;
+    backface-visibility: hidden;
+    border: none;
+    position: relative;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.btn:after, .btn:before, a.btn:not([href]):not([tabindex]):after, a.btn:not([href]):not([tabindex]):before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 55%;
+    background: #28c8e5;
+    top: 0;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.btn:after, a.btn:not([href]):not([tabindex]):after {
+    right: 0;
+}
+
+.btn:before, a.btn:not([href]):not([tabindex]):before {
+    left: 0;
+}
+// hover 
+.btn:hover, a.btn:not([href]):not([tabindex]):hover {
+    color: $c1;
+    background: none;
+    box-shadow: inset 0 0 0 3px #28c8e5;
+}
+
+.btn:hover:before, a.btn:not([href]):not([tabindex]):hover:before {
+    left: -100%;
+}
+
+.btn:hover:after, a.btn:not([href]):not([tabindex]):hover:after {
+    right: -100%;
+}
+
+

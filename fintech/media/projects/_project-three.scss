@@ -1,5 +1,7 @@
 #nasdaq {
     margin-bottom: 55px;
+    .arrow-d {width: 30px; margin:0 auto;}
+    .arrow-r {width: 60px;}
     .nasdaq_title-container {
         .nasdaq_title {
             padding-bottom: 35px;
@@ -121,6 +123,7 @@
             .nasdaq_process-img.desktop {
                 margin: 0 auto;
             }
+            @include screen('md'){display: flex;}
         }
         .nasdaq_process-ul {
             font-size: 14px;

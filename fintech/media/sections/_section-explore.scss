@@ -56,6 +56,10 @@ section.sp_explore {
             margin-bottom: 45px;
             @include screen('sm'){margin-bottom: 0;}
         }
+        .accordion {
+            text-align: center;
+            @include screen('sm'){text-align: unset;}
+        }
         .accordion-item {
             border: none;
             margin-bottom: 5px;
